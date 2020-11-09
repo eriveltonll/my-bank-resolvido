@@ -228,6 +228,20 @@ const validadeAccount = async (account) => {
   }
 };
 
+//Busca todos as contas
+
+//item 12 - Crie um endpoint que ira transferi o cliente com maior saldo em cada agencia para a agencia private 99
+const allClient = async (req, res) => {
+  try {
+    const account = await Account.find({});
+    res.send(account);
+  } catch (error) {
+    res
+      .status(500)
+      .send('Erro ao transferir cliente para a conta private ' + error);
+  }
+};
+
 export default {
   deposit,
   withdraw,
@@ -238,4 +252,5 @@ export default {
   topByBalanceLowest,
   topByBalanceHighest,
   transferToPrivate,
+  allClient,
 };

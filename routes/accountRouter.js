@@ -11,4 +11,5 @@ app.get('/account/avgBalance/:agencia', controller.avgBalance);
 app.get('/account/topByBalanceLowest/:limit', controller.topByBalanceLowest);
 app.get('/account/topByBalanceHighest/:limit', controller.topByBalanceHighest);
 app.get('/account/transferToPrivate/', controller.transferToPrivate);
+app.get('/account/allClient/', controller.allClient);
 export { app as accountRouter };
